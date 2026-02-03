@@ -1,0 +1,7 @@
+.addButton {
+  background-color: #1079f9;
+}
+
+.addButton:hover {
+  transform: scale(1.1);
+}
