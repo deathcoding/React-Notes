@@ -1,16 +1,75 @@
-# React + Vite
+# React Notes Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, feature-rich notes management application built with React and Vite.
 
-Currently, two official plugins are available:
+## 📋 Описание проекта
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React Notes - это веб-приложение для управления заметками, позволяющее пользователям создавать, редактировать, удалять и просматривать свои записи. Приложение реализовано с использованием современных подходов к разработке React-приложений.
 
-## React Compiler
+При разработке использовалась версия nodejs v22.13.1
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Возможности
 
-## Expanding the ESLint configuration
+- ✅ Создание новых заметок
+- ✅ Редактирование существующих заметок
+- ✅ Удаление заметок
+- ✅ Просмотр списка всех заметок
+- ✅ Автоматическое сохранение в localStorage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🏗️ Архитектура
+
+Проект построен по модульному принципу(Feature-Sliced Design) с четким разделением ответственности:
+
+### Структура папок
+
+```
+src/
+├── app/              /Корневые компоненты и настройки приложения
+├── entities/         /Бизнес-сущности (модели данных)
+├── features/         /Функциональные возможности (CRUD операции)
+├── pages/            /Страницы приложения
+├── shared/           /Общие утилиты и компоненты
+├── widgets/          /Переиспользуемые виджеты
+└── main.jsx          /Точка входа приложения
+```
+
+## 🛠️ Технологический стек
+
+### Основные технологии
+- **React 19** - JavaScript-библиотека для создания пользовательских интерфейсов
+- **Vite** - Современный сборщик и сервер разработки
+- **CSS Modules** - Стилизация компонентов с изоляцией стилей
+- **Redux-Toolkit state management** - Управление состоянием приложения
+
+### Инструменты разработки
+- **ESLint** - Статический анализатор кода
+- **localStorage** - Локальное хранение данных
+- **nanoid** - Генерация уникальных идентификаторов
+
+## 🚀 Запуск проекта
+
+### Предварительные требования
+- Node.js 
+- npm или yarn
+
+### Установка зависимостей
+```bash
+npm install
+```
+
+### Запуск в режиме разработки
+```bash
+npm run dev
+```
+
+Приложение будет доступно по адресу: http://localhost:5173
+
+### Сборка для production
+```bash
+npm run build
+```
+
+### Проверка кода с помощью ESLint
+```bash
+npm run lint
+```
